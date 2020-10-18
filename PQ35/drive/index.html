@@ -1,0 +1,2210 @@
+<!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Основные настройки различных платформ концерна VAG">
+      
+      
+        <link rel="canonical" href="http://www.vwcoding.ru/PQ35/drive/">
+      
+      
+        <meta name="author" content="Andrey Topchiy">
+      
+      <link rel="shortcut icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>Управление и динамика - Кодирование автомобилей VAG</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bc7e593a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab28b872.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/custom.css">
+    
+    
+      
+    
+    
+
+  <!-- Determine title -->
+  
+  
+    
+  
+
+  <!-- The image needs to have an absolute URL -->
+  
+
+  <!-- Open graph meta tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Кодирование автомобилей VAG - Управление и динамика" />
+  <meta property="og:description" content="Основные настройки различных платформ концерна VAG" />
+  <meta property="og:url" content="http://www.vwcoding.ru/PQ35/drive/" />
+  <meta property="og:image" content="http://www.vwcoding.ru../assets/logo.png" />
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="" data-md-color-accent="">
+      
+        <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#динамика" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+  <style>
+
+    /* Preserve link color */
+    .md-announce a,
+    .md-announce a:focus,
+    .md-announce a:hover {
+      color: currentColor;
+    }
+
+    /* Don't wrap name of blog article */
+    .md-announce strong {
+      white-space: nowrap;
+    }
+
+    .md-announce {
+      color: #fafafa;
+      background-color: #4caf50;
+      cursor: pointer;
+    }
+
+    .md-announce:hover,
+    .md-announce:focus {
+      color: #fafafa;
+      background-color: #087f23;
+    }
+
+    /* Twitter icon */
+    .md-announce .twitter {
+      margin-left: .2em;
+      color: #00acee;
+    }
+  </style>
+  <a href="https://vwcoding.ru/main">
+      <span class="twemoji" style="">
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M20,4C21.11,4 22,4.89 22,6V18C22,19.11 21.11,20 20,20H4C2.89,20 2,19.11 2,18V6C2,4.89 2.89,4 4,4H20M8.5,15V9H7.25V12.5L4.75,9H3.5V15H4.75V11.5L7.3,15H8.5M13.5,10.26V9H9.5V15H13.5V13.75H11V12.64H13.5V11.38H11V10.26H13.5M20.5,14V9H19.25V13.5H18.13V10H16.88V13.5H15.75V9H14.5V14A1,1 0 0,0 15.5,15H19.5A1,1 0 0,0 20.5,14Z" />
+        </svg>
+      </span>
+    <strong>Настройка режима Fusion для камеры ассистентов. Отключение скачка громкости при старте магнитолы. Подсветка перекрестков при приближении к ним </strong>
+  </a>
+
+          </div>
+        </aside>
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="http://www.vwcoding.ru" title="Кодирование автомобилей VAG" class="md-header-nav__button md-logo" aria-label="Кодирование автомобилей VAG">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Кодирование автомобилей VAG
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Управление и динамика
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/Kanaduchi/vwcoding/" title="Перейти к репозиторию" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Kanaduchi/vwcoding
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        <!-- Home page -->
+
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Главная страница
+      </a>
+    
+  </li>
+
+<!-- Main navigation item with nested items -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+  
+
+  <!-- Recurse, if the first item has nested items -->
+  
+    
+        <li class="md-tabs__item">
+          <a
+            href="../../MQB/main/"
+            class="md-tabs__link"
+          >
+            Платформа MQB
+          </a>
+        </li>
+    
+  
+
+<!-- Main navigation item with external link -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+  
+
+  <!-- Recurse, if the first item has nested items -->
+  
+    
+        <li class="md-tabs__item">
+          <a
+            href="../../MLB-Evo/main/"
+            class="md-tabs__link"
+          >
+            Платформа MLB-Evo
+          </a>
+        </li>
+    
+  
+
+<!-- Main navigation item with external link -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+  
+
+  <!-- Recurse, if the first item has nested items -->
+  
+    
+        <li class="md-tabs__item">
+          <a
+            href="../../PQ26/main/"
+            class="md-tabs__link"
+          >
+            Платформа PQ26
+          </a>
+        </li>
+    
+  
+
+<!-- Main navigation item with external link -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+  
+
+  <!-- Recurse, if the first item has nested items -->
+  
+    
+        <li class="md-tabs__item md-tabs__item--active">
+          <a
+            href="../main/"
+            class="md-tabs__link md-tabs__link--active"
+          >
+            Платформа PQ35
+          </a>
+        </li>
+    
+  
+
+<!-- Main navigation item with external link -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+  <li class="md-tabs__item">
+    <a href="https://money.yandex.ru/to/4100110582992748/50" class="md-tabs__link">
+      Поддержать проект
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <!-- Main navigation -->
+<nav
+  class="md-nav md-nav--primary"
+  aria-label="Navigation"
+  data-md-level="0"
+>
+
+  <!-- Site title -->
+  <label class="md-nav__title" for="__drawer">
+    <a
+      href="http://www.vwcoding.ru"
+      title="Кодирование автомобилей VAG"
+      class="md-nav__button md-logo"
+      aria-label="Кодирование автомобилей VAG"
+    >
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Навигация
+  </label>
+
+  <!-- Repository containing source -->
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Kanaduchi/vwcoding/" title="Перейти к репозиторию" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Kanaduchi/vwcoding
+  </div>
+</a>
+    </div>
+  
+
+  <!-- Render item list -->
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Главная страница
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/main/" class="md-nav__link">
+      Платформа MQB
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Платформа MQB
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Платформа MQB" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Платформа MQB
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/main/" class="md-nav__link">
+      Общая информация
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/assistants/" class="md-nav__link">
+      Ассистенты водителя
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/active_systems/" class="md-nav__link">
+      Системы активной безопасности
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/drive/" class="md-nav__link">
+      Движение и управление
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/parking/" class="md-nav__link">
+      Парковка и маневрирование
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      Эстетическая подсветка
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Эстетическая подсветка" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        <span class="md-nav__icon md-icon"></span>
+        Эстетическая подсветка
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/esteticLights/" class="md-nav__link">
+      Общие настройки
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/esteticLightsCoding/" class="md-nav__link">
+      Кодирование
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/wash/" class="md-nav__link">
+      Зеркала и стеклоочистители
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/security/" class="md-nav__link">
+      Отпирание и запирание
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-9" type="checkbox" id="nav-3-9">
+    
+    <label class="md-nav__link" for="nav-3-9">
+      Освещение
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Освещение" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-9">
+        <span class="md-nav__icon md-icon"></span>
+        Освещение
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/codingLights/" class="md-nav__link">
+      Кодирование фонарей
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/headLights/" class="md-nav__link">
+      Передние фонари
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/rearLights/" class="md-nav__link">
+      Задние фонари
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/sound/" class="md-nav__link">
+      Звук
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/climate/" class="md-nav__link">
+      Климат
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/AID/" class="md-nav__link">
+      Приборная панель
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/headDevice/" class="md-nav__link">
+      Головное устройство
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-14" type="checkbox" id="nav-3-14">
+    
+    <label class="md-nav__link" for="nav-3-14">
+      Шины
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Шины" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-14">
+        <span class="md-nav__icon md-icon"></span>
+        Шины
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/tires/" class="md-nav__link">
+      Общие кодировки
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/tiresCoding/" class="md-nav__link">
+      Генератор параметрии
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MQB/addons/" class="md-nav__link">
+      Дооснащение
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../MLB-Evo/main/" class="md-nav__link">
+      Платформа MLB-Evo
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Платформа MLB-Evo
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Платформа MLB-Evo" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Платформа MLB-Evo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MLB-Evo/main/" class="md-nav__link">
+      Общая информация
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MLB-Evo/assistants/" class="md-nav__link">
+      Ассистенты водителя
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MLB-Evo/security/" class="md-nav__link">
+      Безопасность. Отпирание и запирание
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MLB-Evo/comfort/" class="md-nav__link">
+      Комфорт
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MLB-Evo/lights/" class="md-nav__link">
+      Освещение
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MLB-Evo/AID/" class="md-nav__link">
+      Приборная панель
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MLB-Evo/headDevice/" class="md-nav__link">
+      Головное устройство
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/main/" class="md-nav__link">
+      Платформа PQ26
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Платформа PQ26
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Платформа PQ26" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Платформа PQ26
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/main/" class="md-nav__link">
+      Общая информация
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      Освещение
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Освещение" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        <span class="md-nav__icon md-icon"></span>
+        Освещение
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/lights/" class="md-nav__link">
+      Управление освещением
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/extraLights/" class="md-nav__link">
+      Нестандартные световые решения
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/codingLights/" class="md-nav__link">
+      Обозначения ламп
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/codingLightsPictures/" class="md-nav__link">
+      Обозначения ламп c картинками
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/setLED/" class="md-nav__link">
+      Установка светодиодов
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/wash/" class="md-nav__link">
+      Стеклоочистители / Датчик дождя и света
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/climate/" class="md-nav__link">
+      Климат / Обогрев зеркал и стекол
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/security/" class="md-nav__link">
+      Двери, стекла, цз, брелок и штатная сигнализация
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
+    
+    <label class="md-nav__link" for="nav-7-6">
+      Панель приборов
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Панель приборов" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-6">
+        <span class="md-nav__icon md-icon"></span>
+        Панель приборов
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/instrPanel/" class="md-nav__link">
+      Общие кодировки
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/instrPanelCoding/" class="md-nav__link">
+      Кривые подсветки панели приборов
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/brakes/" class="md-nav__link">
+      Тормоза и шины
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/drive/" class="md-nav__link">
+      Динамика и управление
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/multimedia/" class="md-nav__link">
+      Мультимедиа
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/addons/" class="md-nav__link">
+      Дооснащение
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PQ26/german/" class="md-nav__link">
+      Словарь немецких терминов
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../main/" class="md-nav__link">
+      Платформа PQ35
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      Платформа PQ35
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Платформа PQ35" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Платформа PQ35
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../main/" class="md-nav__link">
+      Общая информация
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Управление и динамика
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Управление и динамика
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#перенастройка-педали-акселератора" class="md-nav__link">
+    Перенастройка педали акселератора
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#адаптация-дроссельной-заслонки" class="md-nav__link">
+    Адаптация дроссельной заслонки
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#перенастройка-акпп" class="md-nav__link">
+    Перенастройка АКПП
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#перенастройка-гтц" class="md-nav__link">
+    Перенастройка ГТЦ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#перенастройка-при-смене-тормозных-дисков" class="md-nav__link">
+    Перенастройка при смене тормозных дисков
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#перенастройка-при-изменении-клиренса" class="md-nav__link">
+    Перенастройка при изменении клиренса
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#электронная-блокировка-дифференциала-xds" class="md-nav__link">
+    Электронная блокировка дифференциала (XDS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#настройка-усилителя-торможения-bas" class="md-nav__link">
+    Настройка усилителя торможения (BAS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#система-компенсации-вращающего-момента-tsc" class="md-nav__link">
+    Система компенсации вращающего момента (TSC)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#настройка-помощи-в-рулевом-управлении-dsr" class="md-nav__link">
+    Настройка помощи в рулевом управлении (DSR)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#активация-ассистента-адаптивного-рулевого-управления-dcc" class="md-nav__link">
+    Активация ассистента адаптивного рулевого управления (DCC)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ассистент-удержания-на-спуске-или-подъеме-hhc" class="md-nav__link">
+    Ассистент удержания на спуске или подъеме (HHC)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#система-очищения-тормозных-дисков-bdw" class="md-nav__link">
+    Система очищения тормозных дисков (BDW)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#система-стабилизации-торможения-при-повороте-cbc" class="md-nav__link">
+    Система стабилизации торможения при повороте (CBC)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#отключаемая-esc" class="md-nav__link">
+    Отключаемая ESC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#настройка-оборотов-холостого-хода-на-16-mpi" class="md-nav__link">
+    Настройка оборотов холостого хода на 1.6 MPI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#адаптация-датчика-угла-поворота-руля" class="md-nav__link">
+    Адаптация датчика угла поворота руля
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lights/" class="md-nav__link">
+      Свет
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../multimedia/" class="md-nav__link">
+      Мультимедиа
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../comfort/" class="md-nav__link">
+      Комфорт
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" class="md-nav__link">
+      Прочие функции
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-7" type="checkbox" id="nav-9-7">
+    
+    <label class="md-nav__link" for="nav-9-7">
+      Кодировки Tiguan 1st Gen
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Кодировки Tiguan 1st Gen" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-7">
+        <span class="md-nav__icon md-icon"></span>
+        Кодировки Tiguan 1st Gen
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tiguan/drive/" class="md-nav__link">
+      Управление и динамика
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tiguan/comfort/" class="md-nav__link">
+      Комфорт
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tiguan/lights/" class="md-nav__link">
+      Свет
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tiguan/instrPanel/" class="md-nav__link">
+      Приборная панель
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tiguan/multimedia/" class="md-nav__link">
+      Мультимедиа
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../odis-e/" class="md-nav__link">
+      Инструкция ODIS E
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../bytes/" class="md-nav__link">
+      Кодирование байтов и битов
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../history/" class="md-nav__link">
+      История изменений
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../questions/" class="md-nav__link">
+      Обратная связь
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="https://money.yandex.ru/to/4100110582992748/50" class="md-nav__link">
+      Поддержать проект
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#перенастройка-педали-акселератора" class="md-nav__link">
+    Перенастройка педали акселератора
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#адаптация-дроссельной-заслонки" class="md-nav__link">
+    Адаптация дроссельной заслонки
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#перенастройка-акпп" class="md-nav__link">
+    Перенастройка АКПП
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#перенастройка-гтц" class="md-nav__link">
+    Перенастройка ГТЦ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#перенастройка-при-смене-тормозных-дисков" class="md-nav__link">
+    Перенастройка при смене тормозных дисков
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#перенастройка-при-изменении-клиренса" class="md-nav__link">
+    Перенастройка при изменении клиренса
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#электронная-блокировка-дифференциала-xds" class="md-nav__link">
+    Электронная блокировка дифференциала (XDS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#настройка-усилителя-торможения-bas" class="md-nav__link">
+    Настройка усилителя торможения (BAS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#система-компенсации-вращающего-момента-tsc" class="md-nav__link">
+    Система компенсации вращающего момента (TSC)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#настройка-помощи-в-рулевом-управлении-dsr" class="md-nav__link">
+    Настройка помощи в рулевом управлении (DSR)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#активация-ассистента-адаптивного-рулевого-управления-dcc" class="md-nav__link">
+    Активация ассистента адаптивного рулевого управления (DCC)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ассистент-удержания-на-спуске-или-подъеме-hhc" class="md-nav__link">
+    Ассистент удержания на спуске или подъеме (HHC)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#система-очищения-тормозных-дисков-bdw" class="md-nav__link">
+    Система очищения тормозных дисков (BDW)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#система-стабилизации-торможения-при-повороте-cbc" class="md-nav__link">
+    Система стабилизации торможения при повороте (CBC)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#отключаемая-esc" class="md-nav__link">
+    Отключаемая ESC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#настройка-оборотов-холостого-хода-на-16-mpi" class="md-nav__link">
+    Настройка оборотов холостого хода на 1.6 MPI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#адаптация-датчика-угла-поворота-руля" class="md-nav__link">
+    Адаптация датчика угла поворота руля
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="drive.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
+              
+                
+                  <a href="https://github.com/Kanaduchi/vwcoding/edit/master/docs/PQ35/drive.md" title="Редактировать страницу" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="динамика">ДИНАМИКА<a class="headerlink" href="#динамика" title="Permanent link">&para;</a></h1>
+<h3 id="перенастройка-педали-акселератора">Перенастройка педали акселератора<a class="headerlink" href="#перенастройка-педали-акселератора" title="Permanent link">&para;</a></h3>
+<p>Немного устраняет «затуп» педали акселератора, делает ее более внятной. Данная кодировка является своеобразной lite-версией кодирования педали акселератора.  </p>
+<div class="admonition note">
+<p class="admonition-title">Особенности</p>
+<p>Доступно только для 1.8 TSI и 2.0 TSI двигателей. Делается на заглушенном двигателе.  Сразу после кодирования необходимо выполнить адаптацию дроссельной заслонки.  </p>
+</div>
+<div class="highlight"><pre><span></span><code>1 блок → кодирование → длинное кодирование → 
+&gt; 0 Байт → 0-2 бит → меняем с 02 (Skoda) на 01 (Audi)
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Примечание</p>
+<p>Вместе с этой настройкой лучше сразу перенастроить XDS, BAS и TSC на максимум. <br />
+Некоторые ставят настройки от Volkswagen – говорят, становится не такая дерганная по сравнению с Audi.  </p>
+</div>
+<h3 id="адаптация-дроссельной-заслонки">Адаптация дроссельной заслонки<a class="headerlink" href="#адаптация-дроссельной-заслонки" title="Permanent link">&para;</a></h3>
+<p>Со временем из-за грязи диапазон положения «открыто - закрыто» немного меняется, для его восстановления и проводится адаптация, так сказать блок заново обучается, где есть реально закрытое положение заслонки, а где открытое.  </p>
+<div class="admonition note">
+<p class="admonition-title">Особенности</p>
+<p>Настройка выполняется на заглушенном двигателе при включенном зажигании. <br />
+Для машин с электронной дроссельной заслонкой (подавляющее большинство новых машин) нужно выбирать группу «060», для тех, у кого механическая дроссельная заслонка – группа «098».  </p>
+</div>
+<div class="highlight"><pre><span></span><code>1 блок → Базовые параметры → 
+&gt; вводим в окно «Группа» нужное значение
+&gt; нажимаем вверху справа переключатель «Вкл./Выкл.» → ждем статуса «Адаптация в норме»
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Примечание</p>
+<p>Если ни одна из групп не отзывается, значит, Ваш двигатель не поддерживает данную адаптацию.</p>
+</div>
+<h3 id="перенастройка-акпп">Перенастройка АКПП<a class="headerlink" href="#перенастройка-акпп" title="Permanent link">&para;</a></h3>
+<p>Классическую 6-ступенчатую АКПП (Aisin 09G) можно перенастроить на свой вкус и цвет. Соотношение динамика/расход при этом прямопропорциональны.  </p>
+<div class="admonition note">
+<p class="admonition-title">Особенности</p>
+<p>Базовые настройки: <br />
+«0000008» - A3 (&lt;2005), Octavia (&lt;2005), Beetle (1C/1Y/9C), Touran (&lt;2005); <br />
+«0000072» - Octavia (2006&gt;), Golf (1K), Golf Plus (5M), Passat (35/3C), Polo (9N), Touran (2006&gt;); <br />
+«0008201» - TT (8N); <br />
+«0000328» - Golf (5K), Golf Plus (52), Tiguan (5N) Rest of World (RoW); <br />
+«0000840» - Tiguan (5N) North American Region (NAR); <br />
+«0008520» - Tiguan (2013&gt;)    </p>
+<p>Экспериментальные настройки:<br />
+«0000020» - No Assistance Edition; <br />
+«0008524» - Full Assistance Edition.   </p>
+<p>Также можно на свой страх и риск поэкспериментировать с включением/выключением отдельных ассистентов (1 – вкл., 0 – выкл.).  <br />
+Приведенные ниже данные не являются официальными.  </p>
+<p>Подбор кодировки производится таким образом: составляется нужное значение из 16 битов в двоичной системе и переводится в шестнадцатеричную (инженерный калькулятор в помощь).   </p>
+<table>
+<thead>
+<tr>
+<th align="center">15</th>
+<th align="center">14</th>
+<th align="center">13</th>
+<th align="center">12</th>
+<th align="center">11</th>
+<th align="center">10</th>
+<th align="center">9</th>
+<th align="center">8</th>
+<th align="center">7</th>
+<th align="center">6</th>
+<th align="center">5</th>
+<th align="center">4</th>
+<th align="center">3</th>
+<th align="center">2</th>
+<th align="center">1</th>
+<th align="center">0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">A</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">B</td>
+<td align="center">C</td>
+<td align="center">0</td>
+<td align="center">D</td>
+<td align="center">0</td>
+<td align="center">E</td>
+<td align="center">F</td>
+<td align="center">G</td>
+<td align="center">0</td>
+<td align="center">H</td>
+</tr>
+</tbody>
+</table>
+<p>13 бит (A) - поддержка подрулевых лепестков;<br />
+9 бит (B) - отключение отображения номера передачи на приборной панели;<br />
+8 бит (C) - торможение двигателем при спуске;<br />
+6 бит (D) - плавная блокировка муфты гидротрнсформатора;<br />
+4 бит (E) - отключение удержания автомобиля на подъеме (HHC);<br />
+3 бит (F) - адаптация под стиль вождения (DSP);<br />
+2 бит (G) - отключение торможения двигателем на скорости ниже 65 км/ч;<br />
+0 бит (H) - работа подрулевых лепестков только в ручном режиме (в D и S не активны)  </p>
+</div>
+<div class="highlight"><pre><span></span><code>2 блок → кодирование → 
+&gt; 1 поле → выставляем нужное значение → выполнить
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Примечание</p>
+<p>Так как АКПП конструктивно очень сложный механизм, то неправильная настройка может привести к самым разнообразным отклонениям в работе, в том числе к поломке. <br />
+Будьте предельно осторожны! <br />
+Перед перенастройкой запишите свою заводскую настройку, а после перенастройки рекомендуется выполнить сброс адаптаций АКПП.</p>
+</div>
+<h3 id="перенастройка-гтц">Перенастройка ГТЦ<a class="headerlink" href="#перенастройка-гтц" title="Permanent link">&para;</a></h3>
+<p>Эффективность торможения увеличивается за счет применения настроек давления в главном тормозном цилиндре (ГТЦ) от Audi S3, Skoda Octavia RS, VW Golf GTI, Seat Leon Cupra.</p>
+<div class="admonition note">
+<p class="admonition-title">Особенности</p>
+<p>Данная методика подходит только для автомобилей с ESP (блок MK60).</p>
+</div>
+<div class="highlight"><pre><span></span><code>3 блок → кодирование → длинное кодирование → 0 Байт → 0 бит → выключить
+3 блок → кодирование → длинное кодирование → 0 Байт → 2 бит → включить
+3 блок → кодирование → длинное кодирование → 8 Байт → 7 бит → выключить
+3 блок → кодирование → длинное кодирование → 8 Байт → 5 бит → включить
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Примечание</p>
+<p>Желательно не только перенастроить давление в ГТЦ, но и все же поменять сами тормозные диски и суппорта. При этом стоит также произвести перенастройку.</p>
+</div>
+<h3 id="перенастройка-при-смене-тормозных-дисков">Перенастройка при смене тормозных дисков<a class="headerlink" href="#перенастройка-при-смене-тормозных-дисков" title="Permanent link">&para;</a></h3>
+<p>При установке тормозных дисков, отличающихся по размерам от штатных, необходимо выполнить перенастройку тормозной системы. </p>
+<div class="admonition note">
+<p class="admonition-title">Особенности</p>
+<p>Данная методика подходит только для автомобилей с ESP (блок MK60).</p>
+</div>
+<p>Выполняется по алгоритму: 
+<div class="highlight"><pre><span></span><code>3 блок → кодирование → длинное кодирование → 
+&gt; 2 Байт → выставляем значение → 10 Байт → выставляем значение
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th align="center">Диаметры дисков, мм<br/>(передние/задние)</th>
+<th align="center">Значение 2 Байта</th>
+<th align="center">Значение 10 Байта</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">280 / 253</td>
+<td align="center">20</td>
+<td align="center">04</td>
+</tr>
+<tr>
+<td align="center">288 / 253</td>
+<td align="center">40</td>
+<td align="center">02</td>
+</tr>
+<tr>
+<td align="center">288 / 272</td>
+<td align="center">40</td>
+<td align="center">02</td>
+</tr>
+<tr>
+<td align="center">312 / 253</td>
+<td align="center">60</td>
+<td align="center">06</td>
+</tr>
+<tr>
+<td align="center">312 / 272</td>
+<td align="center">C0</td>
+<td align="center">03</td>
+</tr>
+<tr>
+<td align="center">345 / 310</td>
+<td align="center">80</td>
+<td align="center">01</td>
+</tr>
+</tbody>
+</table>
+<h3 id="перенастройка-при-изменении-клиренса">Перенастройка при изменении клиренса<a class="headerlink" href="#перенастройка-при-изменении-клиренса" title="Permanent link">&para;</a></h3>
+<p>При установке подвески, изменяющей клиренса, необходимо выполнить перенастройку тормозной системы.</p>
+<div class="admonition note">
+<p class="admonition-title">Особенности</p>
+<p>Данная методика подходит только для автомобилей с ESP (блок MK60).</p>
+</div>
+<p>Выполняется по алгоритму: <br />
+<div class="highlight"><pre><span></span><code>3 блок → кодирование → длинное кодирование →  
+&gt; 4 Байт → выставляем значение →  
+&gt; 12 Байт → выставляем значение
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th align="center">Наименование</th>
+<th align="center">Параметры подвески<br/>(обозначение / клиренс)</th>
+<th align="center">Значение 4 Байта</th>
+<th align="center">Значение 12 Байта</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Евро</td>
+<td align="center">1JA / 145</td>
+<td align="center">09</td>
+<td align="center">90</td>
+</tr>
+<tr>
+<td align="center">ППД</td>
+<td align="center">1JB / 169</td>
+<td align="center">0A</td>
+<td align="center">50</td>
+</tr>
+<tr>
+<td align="center">Спорт</td>
+<td align="center">1JC / 130</td>
+<td align="center">89</td>
+<td align="center">91</td>
+</tr>
+</tbody>
+</table>
+<h3 id="электронная-блокировка-дифференциала-xds">Электронная блокировка дифференциала (XDS)<a class="headerlink" href="#электронная-блокировка-дифференциала-xds" title="Permanent link">&para;</a></h3>
+<p>XDS (Electronic Differential Lock) служит для улучшения динамики при прохождении поворотов с помощью расширенной блокировки дифференциала (также часто именуется комфортной ездой).</p>
+<div class="admonition note">
+<p class="admonition-title">Особенности</p>
+<p>Есть 3 уровня XDS: 0 – средний, 1 – низкий, 2 – высокий (возникает ограничение стартовой динамики).</p>
+</div>
+<p><div class="highlight"><pre><span></span><code>3 блок → кодирование → длинное кодирование → 
+&gt; 17 Байт → 3 бит → включить
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>3 блок → адаптация → 
+&gt; 36 канал XDS → тест → вводим нужное значение уровня → сохранить
+</code></pre></div></p>
+<h3 id="настройка-усилителя-торможения-bas">Настройка усилителя торможения (BAS)<a class="headerlink" href="#настройка-усилителя-торможения-bas" title="Permanent link">&para;</a></h3>
+<p>BAS (Brake Assist System) помогает водителю в критической ситуации реализовать максимальное усилие на педали тормоза в первые мгновения экстренной остановки. </p>
+<div class="admonition note">
+<p class="admonition-title">Особенности</p>
+<p>Есть 3 уровня BAS: 0 – средний, 1 – низкий, 2 – высокий.</p>
+</div>
+<div class="highlight"><pre><span></span><code>3 блок → адаптация → 
+&gt; 09 канал Brake Assist → тест → вводим нужное значение уровня → сохранить
+</code></pre></div>
+<h3 id="система-компенсации-вращающего-момента-tsc">Система компенсации вращающего момента (TSC)<a class="headerlink" href="#система-компенсации-вращающего-момента-tsc" title="Permanent link">&para;</a></h3>
+<p>При резком ускорении переднеприводных авто с 1.8 TSI и 2.0 TSI немного сносит вправо. TSC (Torque Steer Compensation) убирает этот снос.</p>
+<div class="highlight"><pre><span></span><code>44 блок → адаптация → 
+&gt; 05 канал TSC → тест → вводим «1» → сохранить
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Примечание</p>
+<p>Можно также выставить значение «2», вроде бы увеличивается угол подруливания. При ускорении с 60-80км/ч на руль передаётся лёгкая вибрация - это особенность данного ассистента.</p>
+</div>
+<h3 id="настройка-помощи-в-рулевом-управлении-dsr">Настройка помощи в рулевом управлении (DSR)<a class="headerlink" href="#настройка-помощи-в-рулевом-управлении-dsr" title="Permanent link">&para;</a></h3>
+<p>Driving Steering Recommendation (DSR) помогает при рулении в трудных условиях, например при сильной коллейности дороги, создавая легкое усилие в нужном для подруливания направлении.</p>
+<div class="admonition note">
+<p class="admonition-title">Особенности</p>
+<p>Есть 3 уровня DSR: 0 – высокий, 1 – средний, 2 – низкий</p>
+</div>
+<div class="highlight"><pre><span></span><code>3 блок → адаптация → 
+&gt; 54 канал DSR → тест → вводим нужное значение уровня → сохранить
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Примечание</p>
+</div>
+<p>На TSI двигателях лучше выставить значение «0». У кого 3 блок не поддерживает, можно аналогично
+настроить через 3 канал 44 блока.</p>
+<h3 id="активация-ассистента-адаптивного-рулевого-управления-dcc">Активация ассистента адаптивного рулевого управления (DCC)<a class="headerlink" href="#активация-ассистента-адаптивного-рулевого-управления-dcc" title="Permanent link">&para;</a></h3>
+<p>Adaptive / Dynamic Chassis Control (DCC) позволяет усилителю рулевого управления и регулируемой подвеске (если такая имеется) адаптироваться под дорожные условия.</p>
+<div class="admonition note">
+<p class="admonition-title">Особенности</p>
+<p>Поддерживается не всеми блоками, работоспособность проверена на версиях ПО не ниже 3305.</p>
+</div>
+<div class="highlight"><pre><span></span><code>44 блок → адаптация → 
+&gt; 8 канал DCC → тест → вводим «1» → сохранить
+</code></pre></div>
+<h3 id="ассистент-удержания-на-спуске-или-подъеме-hhc">Ассистент удержания на спуске или подъеме (HHC)<a class="headerlink" href="#ассистент-удержания-на-спуске-или-подъеме-hhc" title="Permanent link">&para;</a></h3>
+<p>HHC (Hill Hold Control) удерживает автомобиль на спуске или подъеме и предотвращает его самопроизвольное скатывание, пока водитель не нажмет педаль газа. </p>
+<div class="admonition note">
+<p class="admonition-title">Особенности</p>
+<p>Есть 3 уровня HHC: 0 – стандартный, 1 – быстрый (низкие обороты), 2 – долгий (высокие обороты).</p>
+</div>
+<p><div class="highlight"><pre><span></span><code>3 блок → кодирование → длинное кодирование → 
+&gt; 16 Байт → 0 бит → включить
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>3 блок → адаптация → 
+&gt; 58 канал HHC → тест → вводим нужное значение уровня → сохранить
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Примечание</p>
+<p>Если после активации у Вас не пропадает ошибка по ABS, значит Ваш блок не поддерживает HHC.</p>
+</div>
+<h3 id="система-очищения-тормозных-дисков-bdw">Система очищения тормозных дисков (BDW)<a class="headerlink" href="#система-очищения-тормозных-дисков-bdw" title="Permanent link">&para;</a></h3>
+<p>BDW (Brake Disc Wiper) позволяет оставлять тормозные диски сухими и чистыми в дождливую погоду.  <br />
+Срабатывает система при включении стеклоочистителей (вручную или автоматически) в течение более 5 секунд. По умолчанию должна быть включена, но проверить все же стоит.</p>
+<div class="highlight"><pre><span></span><code>3 блок → адаптация → 
+&gt; 55 канал BDW → тест → вводим «1» → сохранить
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Примечание</p>
+<p>По умолчанию должна быть включена на всех автомобилях, но проверить все же стоит.</p>
+</div>
+<h3 id="система-стабилизации-торможения-при-повороте-cbc">Система стабилизации торможения при повороте (CBC)<a class="headerlink" href="#система-стабилизации-торможения-при-повороте-cbc" title="Permanent link">&para;</a></h3>
+<p>CBC (Corner Brake Control) управляет при торможении тормозными давлениями таким образом, чтобы создать корректирующий разворачивающий «противомомент», тем самым корректирует проявление «рыскания» при торможении в повороте.   </p>
+<div class="highlight"><pre><span></span><code>3 блок → кодирование → длинное кодирование → 
+&gt; 15 Байт → 4 бит → включить
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Примечание</p>
+<p>Активируется далеко не на всех автомобилях.</p>
+</div>
+<h3 id="отключаемая-esc">Отключаемая ESC<a class="headerlink" href="#отключаемая-esc" title="Permanent link">&para;</a></h3>
+<p>На автомобилях выпущенных после 2008 года ESC (Electronic Stability Control) невозможно отключить кнопкой (отключается только ASR). Эта же функция позволяет при удержании кнопки ASR в течение 5 секунд временно отключить ESC до последующего включения кнопкой или перезапуска двигателя.</p>
+<div class="admonition note">
+<p class="admonition-title">Особенности</p>
+<p>Подходит для блоков, чей номер в предпоследнем символе содержит «B» (XXX XXX XXX BX) кроме блоков с окончанием номеров на «BD», «BE».<br />
+Делается на заглушенном двигателе.  </p>
+</div>
+<ul>
+<li>Для блоков &lt;=BL с 19 Байтами (первый «0» последний «18»). <br />
+Есть 2 варианта работы отключения: <br />
+A) – отключается сначала ASR, через несколько секунд удержания кнопки отключается ESC; <br />
+B) – сразу отключается ESC.   </li>
+</ul>
+<div class="highlight"><pre><span></span><code>3 блок → кодирование → длинное кодирование → 
+&gt; 06 Байт → 7 бит → включить
+&gt; 14 Байт → 0 бит → включить
+A) &gt; 16 Байт → 3 бит → выключить
+B) &gt; 16 Байт → 3 бит → включить
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Примечание</p>
+<p>На TDI двигателях 14 Байт изменять не нужно.</p>
+</div>
+<ul>
+<li>Для блоков =&gt;BM с 20 Байтами (первый «0» последний «19») <br />
+Есть 2 варианта работы отключения: 
+C) – обычное полное отключение ESC;  <br />
+D) – режим ESCSport, при котором появляется пустить авто в занос, но в критический момент ESC все равно сработает.   </li>
+</ul>
+<div class="highlight"><pre><span></span><code>3 блок → кодирование → длинное кодирование → 
+&gt; 19 Байт → 4 бит → включить
+C) &gt; 19 Байт → 5 бит → включить → 6 бит → включить → 7 бит → выключить
+D) &gt; 19 Байт → 5 бит → выключить → 6 бит → выключить → 7 бит → включить
+</code></pre></div>
+<h3 id="настройка-оборотов-холостого-хода-на-16-mpi">Настройка оборотов холостого хода на 1.6 MPI<a class="headerlink" href="#настройка-оборотов-холостого-хода-на-16-mpi" title="Permanent link">&para;</a></h3>
+<p>Если обороты скачут, то данная настройка поможет их выровнять.</p>
+<div class="admonition note">
+<p class="admonition-title">Особенности</p>
+<p>Настройка выполняется на заглушенном двигателе при включенном зажигании.<br />
+Допустимый диапазон: от 128 (соответствует 640 об/мин, на приборной панели ≈ 700 об/мин) до 148 (соответствует 832 об/мин, на приборной панели ≈ 850 об/мин). <br />
+Проверка выполняется на запущенном двигателе. Настройка сбрасывается после разряда или скидывании клемм АКБ.</p>
+</div>
+<p><div class="highlight"><pre><span></span><code>1 блок → адаптация → 
+&gt; 01 канал → вводим нужное значение → сохранить
+</code></pre></div>
+Проверка
+<div class="highlight"><pre><span></span><code>1 блок → 08 - Измеряемые группы →  
+&gt; в окно «Группа» вводим значение «050» и нажимаем «Прочитать».  
+&gt; Значение оборотов холостого хода находится во 2-м окне.
+</code></pre></div></p>
+<h3 id="адаптация-датчика-угла-поворота-руля">Адаптация датчика угла поворота руля<a class="headerlink" href="#адаптация-датчика-угла-поворота-руля" title="Permanent link">&para;</a></h3>
+<p>Данная адаптация позволяет установить нулевое положение угла поворота рулевого колеса, посредством адаптации датчика G85.</p>
+<div class="admonition note">
+<p class="admonition-title">Осбенности</p>
+<p>Адаптация выполняется при заведенном двигателе, руль изначально нужно выставить ровно. 
+Для автомобилей без ESC, методика выполняется в 44-м блоке, для авто с ESC – в 3-м блоке.</p>
+</div>
+<div class="highlight"><pre><span></span><code>3 (или 44) блок → Закрытая область → Базовые параметры   
+&gt; в окно «Группа» вводим значение «060» и нажимаем «Прочитать»   
+&gt; один оборот руля вправо → выставить руль прямо → один оборот руля влево → выставить руль прямо   
+&gt; нажимаем переключатель «Вкл./Выкл.» → слушаем писк приборной панели   
+&gt; нажимаем «Прочитать» → ждем статуса «В норме»   
+</code></pre></div>
+<blockquote>
+<p>логин-пароль 40168</p>
+</blockquote>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../main/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Назад
+                </span>
+                Общая информация
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../lights/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Вперед
+                </span>
+                Свет
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 - Andrey Topchiy
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e # \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

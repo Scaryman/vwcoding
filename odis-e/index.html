@@ -1,0 +1,1719 @@
+<!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Основные настройки различных платформ концерна VAG">
+      
+      
+        <link rel="canonical" href="http://www.vwcoding.ru/odis-e/">
+      
+      
+        <meta name="author" content="Andrey Topchiy">
+      
+      <link rel="shortcut icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>Инструкция ODIS E - Кодирование автомобилей VAG</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../assets/custom.css">
+    
+    
+      
+    
+    
+
+  <!-- Determine title -->
+  
+  
+    
+  
+
+  <!-- The image needs to have an absolute URL -->
+  
+
+  <!-- Open graph meta tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Кодирование автомобилей VAG - Инструкция ODIS E" />
+  <meta property="og:description" content="Основные настройки различных платформ концерна VAG" />
+  <meta property="og:url" content="http://www.vwcoding.ru/odis-e/" />
+  <meta property="og:image" content="http://www.vwcoding.ru../assets/logo.png" />
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="" data-md-color-accent="">
+      
+        <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#работа-с-odis-engineering" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+  <style>
+
+    /* Preserve link color */
+    .md-announce a,
+    .md-announce a:focus,
+    .md-announce a:hover {
+      color: currentColor;
+    }
+
+    /* Don't wrap name of blog article */
+    .md-announce strong {
+      white-space: nowrap;
+    }
+
+    .md-announce {
+      color: #fafafa;
+      background-color: #4caf50;
+      cursor: pointer;
+    }
+
+    .md-announce:hover,
+    .md-announce:focus {
+      color: #fafafa;
+      background-color: #087f23;
+    }
+
+    /* Twitter icon */
+    .md-announce .twitter {
+      margin-left: .2em;
+      color: #00acee;
+    }
+  </style>
+  <a href="https://vwcoding.ru/main">
+      <span class="twemoji" style="">
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M20,4C21.11,4 22,4.89 22,6V18C22,19.11 21.11,20 20,20H4C2.89,20 2,19.11 2,18V6C2,4.89 2.89,4 4,4H20M8.5,15V9H7.25V12.5L4.75,9H3.5V15H4.75V11.5L7.3,15H8.5M13.5,10.26V9H9.5V15H13.5V13.75H11V12.64H13.5V11.38H11V10.26H13.5M20.5,14V9H19.25V13.5H18.13V10H16.88V13.5H15.75V9H14.5V14A1,1 0 0,0 15.5,15H19.5A1,1 0 0,0 20.5,14Z" />
+        </svg>
+      </span>
+    <strong>Настройка режима Fusion для камеры ассистентов. Отключение скачка громкости при старте магнитолы. Подсветка перекрестков при приближении к ним </strong>
+  </a>
+
+          </div>
+        </aside>
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="http://www.vwcoding.ru" title="Кодирование автомобилей VAG" class="md-header-nav__button md-logo" aria-label="Кодирование автомобилей VAG">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Кодирование автомобилей VAG
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Инструкция ODIS E
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/Kanaduchi/vwcoding/" title="Перейти к репозиторию" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Kanaduchi/vwcoding
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        <!-- Home page -->
+
+  <li class="md-tabs__item">
+    
+      <a 
+        href=".." 
+        class="md-tabs__link md-tabs__link--active"
+      >
+        Главная страница
+      </a>
+    
+  </li>
+
+<!-- Main navigation item with nested items -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+  
+
+  <!-- Recurse, if the first item has nested items -->
+  
+    
+        <li class="md-tabs__item">
+          <a
+            href="../MQB/main/"
+            class="md-tabs__link"
+          >
+            Платформа MQB
+          </a>
+        </li>
+    
+  
+
+<!-- Main navigation item with external link -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+  
+
+  <!-- Recurse, if the first item has nested items -->
+  
+    
+        <li class="md-tabs__item">
+          <a
+            href="../MLB-Evo/main/"
+            class="md-tabs__link"
+          >
+            Платформа MLB-Evo
+          </a>
+        </li>
+    
+  
+
+<!-- Main navigation item with external link -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+  
+
+  <!-- Recurse, if the first item has nested items -->
+  
+    
+        <li class="md-tabs__item">
+          <a
+            href="../PQ26/main/"
+            class="md-tabs__link"
+          >
+            Платформа PQ26
+          </a>
+        </li>
+    
+  
+
+<!-- Main navigation item with external link -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+  
+
+  <!-- Recurse, if the first item has nested items -->
+  
+    
+        <li class="md-tabs__item">
+          <a
+            href="../PQ35/main/"
+            class="md-tabs__link"
+          >
+            Платформа PQ35
+          </a>
+        </li>
+    
+  
+
+<!-- Main navigation item with external link -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+      
+        <!-- Home page -->
+
+  <li class="md-tabs__item">
+    <a href="https://money.yandex.ru/to/4100110582992748/50" class="md-tabs__link">
+      Поддержать проект
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <!-- Main navigation -->
+<nav
+  class="md-nav md-nav--primary"
+  aria-label="Navigation"
+  data-md-level="0"
+>
+
+  <!-- Site title -->
+  <label class="md-nav__title" for="__drawer">
+    <a
+      href="http://www.vwcoding.ru"
+      title="Кодирование автомобилей VAG"
+      class="md-nav__button md-logo"
+      aria-label="Кодирование автомобилей VAG"
+    >
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    Навигация
+  </label>
+
+  <!-- Repository containing source -->
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Kanaduchi/vwcoding/" title="Перейти к репозиторию" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Kanaduchi/vwcoding
+  </div>
+</a>
+    </div>
+  
+
+  <!-- Render item list -->
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Главная страница
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/main/" class="md-nav__link">
+      Платформа MQB
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Платформа MQB
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Платформа MQB" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Платформа MQB
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/main/" class="md-nav__link">
+      Общая информация
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/assistants/" class="md-nav__link">
+      Ассистенты водителя
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/active_systems/" class="md-nav__link">
+      Системы активной безопасности
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/drive/" class="md-nav__link">
+      Движение и управление
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/parking/" class="md-nav__link">
+      Парковка и маневрирование
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      Эстетическая подсветка
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Эстетическая подсветка" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        <span class="md-nav__icon md-icon"></span>
+        Эстетическая подсветка
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/esteticLights/" class="md-nav__link">
+      Общие настройки
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/esteticLightsCoding/" class="md-nav__link">
+      Кодирование
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/wash/" class="md-nav__link">
+      Зеркала и стеклоочистители
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/security/" class="md-nav__link">
+      Отпирание и запирание
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-9" type="checkbox" id="nav-3-9">
+    
+    <label class="md-nav__link" for="nav-3-9">
+      Освещение
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Освещение" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-9">
+        <span class="md-nav__icon md-icon"></span>
+        Освещение
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/codingLights/" class="md-nav__link">
+      Кодирование фонарей
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/headLights/" class="md-nav__link">
+      Передние фонари
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/rearLights/" class="md-nav__link">
+      Задние фонари
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/sound/" class="md-nav__link">
+      Звук
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/climate/" class="md-nav__link">
+      Климат
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/AID/" class="md-nav__link">
+      Приборная панель
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/headDevice/" class="md-nav__link">
+      Головное устройство
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-14" type="checkbox" id="nav-3-14">
+    
+    <label class="md-nav__link" for="nav-3-14">
+      Шины
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Шины" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-14">
+        <span class="md-nav__icon md-icon"></span>
+        Шины
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/tires/" class="md-nav__link">
+      Общие кодировки
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/tiresCoding/" class="md-nav__link">
+      Генератор параметрии
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MQB/addons/" class="md-nav__link">
+      Дооснащение
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../MLB-Evo/main/" class="md-nav__link">
+      Платформа MLB-Evo
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Платформа MLB-Evo
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Платформа MLB-Evo" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Платформа MLB-Evo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MLB-Evo/main/" class="md-nav__link">
+      Общая информация
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MLB-Evo/assistants/" class="md-nav__link">
+      Ассистенты водителя
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MLB-Evo/security/" class="md-nav__link">
+      Безопасность. Отпирание и запирание
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MLB-Evo/comfort/" class="md-nav__link">
+      Комфорт
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MLB-Evo/lights/" class="md-nav__link">
+      Освещение
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MLB-Evo/AID/" class="md-nav__link">
+      Приборная панель
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MLB-Evo/headDevice/" class="md-nav__link">
+      Головное устройство
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/main/" class="md-nav__link">
+      Платформа PQ26
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Платформа PQ26
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Платформа PQ26" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Платформа PQ26
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/main/" class="md-nav__link">
+      Общая информация
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      Освещение
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Освещение" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        <span class="md-nav__icon md-icon"></span>
+        Освещение
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/lights/" class="md-nav__link">
+      Управление освещением
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/extraLights/" class="md-nav__link">
+      Нестандартные световые решения
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/codingLights/" class="md-nav__link">
+      Обозначения ламп
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/codingLightsPictures/" class="md-nav__link">
+      Обозначения ламп c картинками
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/setLED/" class="md-nav__link">
+      Установка светодиодов
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/wash/" class="md-nav__link">
+      Стеклоочистители / Датчик дождя и света
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/climate/" class="md-nav__link">
+      Климат / Обогрев зеркал и стекол
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/security/" class="md-nav__link">
+      Двери, стекла, цз, брелок и штатная сигнализация
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
+    
+    <label class="md-nav__link" for="nav-7-6">
+      Панель приборов
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Панель приборов" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-6">
+        <span class="md-nav__icon md-icon"></span>
+        Панель приборов
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/instrPanel/" class="md-nav__link">
+      Общие кодировки
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/instrPanelCoding/" class="md-nav__link">
+      Кривые подсветки панели приборов
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/brakes/" class="md-nav__link">
+      Тормоза и шины
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/drive/" class="md-nav__link">
+      Динамика и управление
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/multimedia/" class="md-nav__link">
+      Мультимедиа
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/addons/" class="md-nav__link">
+      Дооснащение
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ26/german/" class="md-nav__link">
+      Словарь немецких терминов
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../PQ35/main/" class="md-nav__link">
+      Платформа PQ35
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Платформа PQ35
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Платформа PQ35" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Платформа PQ35
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ35/main/" class="md-nav__link">
+      Общая информация
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ35/drive/" class="md-nav__link">
+      Управление и динамика
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ35/lights/" class="md-nav__link">
+      Свет
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ35/multimedia/" class="md-nav__link">
+      Мультимедиа
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ35/comfort/" class="md-nav__link">
+      Комфорт
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ35/other/" class="md-nav__link">
+      Прочие функции
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-7" type="checkbox" id="nav-9-7">
+    
+    <label class="md-nav__link" for="nav-9-7">
+      Кодировки Tiguan 1st Gen
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Кодировки Tiguan 1st Gen" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-7">
+        <span class="md-nav__icon md-icon"></span>
+        Кодировки Tiguan 1st Gen
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ35/Tiguan/drive/" class="md-nav__link">
+      Управление и динамика
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ35/Tiguan/comfort/" class="md-nav__link">
+      Комфорт
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ35/Tiguan/lights/" class="md-nav__link">
+      Свет
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ35/Tiguan/instrPanel/" class="md-nav__link">
+      Приборная панель
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PQ35/Tiguan/multimedia/" class="md-nav__link">
+      Мультимедиа
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Инструкция ODIS E
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Инструкция ODIS E
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#загрузка-нужного-профиля-машины" class="md-nav__link">
+    Загрузка нужного профиля машины
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#экспорт-адаптаций-и-кодировок" class="md-nav__link">
+    Экспорт адаптаций и кодировок
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#считывание-параметрии" class="md-nav__link">
+    Считывание параметрии
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#загрузка-параметрии" class="md-nav__link">
+    Загрузка параметрии
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#обновление-по-блоков" class="md-nav__link">
+    Обновление ПО блоков
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../bytes/" class="md-nav__link">
+      Кодирование байтов и битов
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../history/" class="md-nav__link">
+      История изменений
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../questions/" class="md-nav__link">
+      Обратная связь
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="https://money.yandex.ru/to/4100110582992748/50" class="md-nav__link">
+      Поддержать проект
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#загрузка-нужного-профиля-машины" class="md-nav__link">
+    Загрузка нужного профиля машины
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#экспорт-адаптаций-и-кодировок" class="md-nav__link">
+    Экспорт адаптаций и кодировок
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#считывание-параметрии" class="md-nav__link">
+    Считывание параметрии
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#загрузка-параметрии" class="md-nav__link">
+    Загрузка параметрии
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#обновление-по-блоков" class="md-nav__link">
+    Обновление ПО блоков
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="odis-e.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
+              
+                
+                  <a href="https://github.com/Kanaduchi/vwcoding/edit/master/docs/odis-e.md" title="Редактировать страницу" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="работа-с-odis-engineering">Работа с ODIS ENGINEERING<a class="headerlink" href="#работа-с-odis-engineering" title="Permanent link">&para;</a></h1>
+<h3 id="загрузка-нужного-профиля-машины">Загрузка нужного профиля машины<a class="headerlink" href="#загрузка-нужного-профиля-машины" title="Permanent link">&para;</a></h3>
+<ol>
+<li>В ODIS S нужно начать диагностику (можно не ждать окончания диагностики, главное начать её делать)   </li>
+<li>Сохранить протокол диагностики   </li>
+<li>Открыть его в браузере &gt; Развернуть всё &gt; чуть ниже начала протокола будет написано название проекта на данный авто   </li>
+</ol>
+<p><img alt="Screenshot" src="../images/odis-diag.png" /></p>
+<p>Нас интересует пункт: Наименование проекта ASAM</p>
+<h3 id="экспорт-адаптаций-и-кодировок">Экспорт адаптаций и кодировок<a class="headerlink" href="#экспорт-адаптаций-и-кодировок" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Пункт "Функции автомобиля" (Vehicle services), подпункт 046-Специальные функции автомобиля (Fzg.Sonderfunktionen)    </li>
+<li>Выбираем нужный блок.  </li>
+<li>Ставим галки на против пунктов "Адаптация", "Кодировки", нажимаем "Считывание данных" (Read data)   </li>
+<li>Указываем путь и нажимаем сохранить.   </li>
+</ol>
+<p>Некоторые блоки могут спросить пароли (логины) После окончания сканирования наши протоколы сохранены в выбранную папку. </p>
+<h3 id="считывание-параметрии">Считывание параметрии<a class="headerlink" href="#считывание-параметрии" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Выбираем нужный блок  </li>
+<li>Пункт 010, подпункт 010.02 "ячейки памяти"   </li>
+<li>Выбираем нужный адрес - нажимаем "считать ячейки"  </li>
+<li>Указываем путь и нажимаем сохранить.   </li>
+</ol>
+<h3 id="загрузка-параметрии">Загрузка параметрии<a class="headerlink" href="#загрузка-параметрии" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Выбираем нужный блок  </li>
+<li>Пункт 010, подпункт 010.01 "Загрузка данных"   </li>
+<li>Выбираем файл и начинаем загрузку   </li>
+</ol>
+<h3 id="обновление-по-блоков">Обновление ПО блоков<a class="headerlink" href="#обновление-по-блоков" title="Permanent link">&para;</a></h3>
+<p>Перед обновлением ПО необходимо выполнить следующие указания:    </p>
+<p>• Обеспечить подключение зарядного устройства к АКБ автомобиля <br />
+• При обновлении ПО все электрические потребители, в которых нет необходимости (вентиляция, подогрев сидений, освещение салона и т. д.), должны быть отключены.<br />
+• В обязательном порядке использовать кабельное соединение между адаптером и автомобилем. При соединении по Bluetooth© (трансмиттер) возможны нежелательные прерывания процесса обновления ПО!<br />
+• В обязательном порядке отключить все сторонние подключения к автомобилю (сотовые телефоны, внешние диски) и вынуть SIM-карту из ГУ!<br />
+• Дверь водителя во время обновления ПО должна быть открыта.<br />
+• Во время обновления ПО включить на автомобиле аварийную световую сигнализацию, чтобы обеспечить постоянную активность шины CAN на стороне автомобиля.</p>
+                
+                  
+                
+              
+              
+                
+
+  
+
+
+  <h2 id="__comments">Комментарии</h2>
+  <div id="disqus_thread"></div>
+  <script>var disqus_config=function(){this.page.url="http://www.vwcoding.ru/odis-e/",this.page.identifier="/odis-e/"};window.addEventListener("load",function(){var e=document,i=e.createElement("script");i.src="//https-mqb-readthedocs-io.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)})</script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../PQ35/Tiguan/multimedia/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Назад
+                </span>
+                Мультимедиа
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../bytes/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Вперед
+                </span>
+                Кодирование байтов и битов
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 - Andrey Topchiy
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e # \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
